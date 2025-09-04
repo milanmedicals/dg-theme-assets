@@ -1,150 +1,150 @@
 /* --- Sidebar Categories Styles --- */
-.sidebar-categories {
-  background: #f8f9fa;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: all 0.3s ease-in-out;
+body .sidebar-categories {
+  background: #f8f9fa !important;
+  border-radius: 10px !important;
+  padding: 15px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+  transition: all 0.3s ease-in-out !important;
 }
-.sidebar-categories:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+body .sidebar-categories:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1) !important;
 }
-.sidebar-categories h2.widget-title {
-  font-size: 1.4em;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #333;
-  border-bottom: 2px solid #ff6f61;
-  padding-bottom: 8px;
+body .sidebar-categories h2.widget-title {
+  font-size: 1.4em !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  color: #333 !important;
+  border-bottom: 2px solid #ff6f61 !important;
+  padding-bottom: 8px !important;
 }
-.sidebar-categories ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+body .sidebar-categories ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-.sidebar-categories ul li {
-  margin: 12px 0;
-  position: relative;
+body .sidebar-categories ul li {
+  margin: 12px 0 !important;
+  position: relative !important;
 }
-.sidebar-categories ul li a {
-  text-decoration: none;
-  color: #444;
-  font-size: 1.1em;
-  padding: 8px 12px;
-  display: block;
-  border-radius: 6px;
-  transition: all 0.3s ease-in-out;
+body .sidebar-categories ul li a {
+  text-decoration: none !important;
+  color: #444 !important;
+  font-size: 1.1em !important;
+  padding: 8px 12px !important;
+  display: block !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease-in-out !important;
 }
-.sidebar-categories ul li a:hover {
-  background: #ff6f61;
-  color: #fff;
-  padding-left: 18px;
+body .sidebar-categories ul li a:hover {
+  background: #ff6f61 !important;
+  color: #fff !important;
+  padding-left: 18px !important;
 }
-.sidebar-categories ul li a i {
-  margin-right: 8px;
-  color: #ff6f61;
-  transition: all 0.3s ease-in-out;
+body .sidebar-categories ul li a i {
+  margin-right: 8px !important;
+  color: #ff6f61 !important;
+  transition: all 0.3s ease-in-out !important;
 }
-.sidebar-categories ul li a:hover i {
-  color: #fff;
+body .sidebar-categories ul li a:hover i {
+  color: #fff !important;
 }
-.sidebar-categories ul li:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 1px;
-  background: #eee;
+body .sidebar-categories ul li:after {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -5px !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: #eee !important;
 }
-.sidebar-categories ul li:last-child:after {
-  display: none;
+body .sidebar-categories ul li:last-child:after {
+  display: none !important;
 }
 
 /* --- Sidebar Footer (Contact Info) --- */
-.sidebar-footer {
-  margin-top: 25px;
-  padding: 15px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+body .sidebar-footer {
+  margin-top: 25px !important;
+  padding: 15px !important;
+  background: #fff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
 }
-.sidebar-footer h3 {
-  font-size: 1.2em;
-  margin-bottom: 12px;
-  color: #333;
+body .sidebar-footer h3 {
+  font-size: 1.2em !important;
+  margin-bottom: 12px !important;
+  color: #333 !important;
 }
-.sidebar-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+body .sidebar-footer ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-.sidebar-footer ul li {
-  margin: 8px 0;
-  font-size: 1em;
-  color: #555;
+body .sidebar-footer ul li {
+  margin: 8px 0 !important;
+  font-size: 1em !important;
+  color: #555 !important;
 }
-.sidebar-footer ul li i {
-  margin-right: 8px;
-  color: #ff6f61;
+body .sidebar-footer ul li i {
+  margin-right: 8px !important;
+  color: #ff6f61 !important;
 }
 
 /* --- WhatsApp Floating Button --- */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-  transition: background 0.3s ease;
+body .whatsapp-float {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  background: #25d366 !important;
+  color: white !important;
+  border-radius: 50% !important;
+  width: 55px !important;
+  height: 55px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+  z-index: 1000 !important;
+  transition: background 0.3s ease !important;
 }
-.whatsapp-float:hover {
-  background: #1ebd5a;
+body .whatsapp-float:hover {
+  background: #1ebd5a !important;
 }
-.whatsapp-float i {
-  font-size: 28px;
+body .whatsapp-float i {
+  font-size: 28px !important;
 }
 
 /* --- Responsive Sidebar --- */
 @media (max-width:991px){
-  .sidebar-categories{
-    display:none;
+  body .sidebar-categories{
+    display:none !important;
   }
-  .hamburger-menu{
-    display:block;
-    cursor:pointer;
-    font-size:1.5em;
-    margin-bottom:15px;
+  body .hamburger-menu{
+    display:block !important;
+    cursor:pointer !important;
+    font-size:1.5em !important;
+    margin-bottom:15px !important;
   }
-  .hamburger-menu i{
-    transition:all 0.3s ease;
+  body .hamburger-menu i{
+    transition:all 0.3s ease !important;
   }
 }
 @media (min-width:992px){
-  .hamburger-menu{
-    display:none;
+  body .hamburger-menu{
+    display:none !important;
   }
 }
 
-/* --- Width Constraints (was Section 10) --- */
-.site-header,
-#ast-desktop-header,
-#ast-mobile-header,
-.ast-container{
-  max-width:1080px!important;
-  width:100%!important;
-  margin:0 auto!important;
-  padding-left:15px;
-  padding-right:15px;
-  box-sizing:border-box;
+/* --- Width Constraints --- */
+body .site-header,
+body #ast-desktop-header,
+body #ast-mobile-header,
+body .ast-container{
+  max-width:1080px !important;
+  width:100% !important;
+  margin:0 auto !important;
+  padding-left:15px !important;
+  padding-right:15px !important;
+  box-sizing:border-box !important;
 }
