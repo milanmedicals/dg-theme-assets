@@ -1,30 +1,4 @@
-/* Pharmacy Astra Child Theme CSS - Optimized for speed */
-body{font-family:sans-serif;margin:0;padding:0;color:#333;background:#fff}
-.header-top-line{max-width:1080px;margin:0 auto;padding:10px 15px;display:flex;justify-content:space-between;align-items:center;background:#f8f8f8;border-bottom:1px solid #ddd}
-.site-title{margin:0;font-size:24px}
-.site-title a{color:#0073aa;text-decoration:none}
-.site-title a:hover{text-decoration:underline}
-.contact-info{display:flex;gap:15px}
-.contact-info a{color:#0073aa;font-size:14px;text-decoration:none}
-.contact-info a:hover{text-decoration:underline}
-.contact-info i{margin-right:5px}
-.header-shipping-info{max-width:1080px;margin:0 auto;padding:10px 15px;text-align:center;background:#e6f3ff;color:#333;font-size:14px}
-.header-shipping-info strong{font-weight:600}
-.primary-menu{max-width:1080px;margin:0 auto;padding:10px 15px;background:#0073aa}
-.primary-menu ul{list-style:none;margin:0;padding:0;display:flex;gap:20px}
-.primary-menu li{font-size:16px}
-.primary-menu a{color:#fff;text-decoration:none}
-.primary-menu a:hover{text-decoration:underline}
-.search-cart-bar{max-width:1080px;margin:0 auto;padding:10px 15px;display:flex;align-items:center;gap:15px;background:#fff;border-bottom:1px solid #ddd}
-.search-cart-bar label{font-size:14px;color:#333}
-.search-cart-bar form{flex:1;display:flex;gap:10px}
-.search-cart-bar input[type="search"]{flex:1;padding:8px;font-size:14px;border:1px solid #ddd;border-radius:4px}
-.search-cart-bar button{padding:8px 12px;background:#0073aa;color:#fff;border:none;border-radius:4px;cursor:pointer}
-.search-cart-bar button:hover{background:#005580}
-.cart-icon-wrapper{position:relative;color:#0073aa;text-decoration:none}
-.cart-count-bubble{position:absolute;top:-8px;right:-8px;background:#d00;color:#fff;font-size:12px;padding:2px 6px;border-radius:50%}
-.hamburger-menu{display:none;padding:10px;background:#0073aa;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:14px}
-.hamburger-menu i{margin-right:5px}
+/* Pharmacy Astra Child Theme CSS - Non-critical styles */
 .page-layout-wrapper{max-width:1080px;margin:0 auto;padding:15px;display:grid;grid-template-columns:250px 1fr;gap:20px}
 .sidebar-categories{background:#f8f8f8;padding:15px;border-radius:4px}
 .sidebar-categories h3{margin:0 0 10px;font-size:18px}
@@ -55,4 +29,4 @@ body{font-family:sans-serif;margin:0;padding:0;color:#333;background:#fff}
 .price-disclaimer{font-size:12px;color:#666;margin:20px 0}
 .footer-disclaimer{font-size:12px;color:#666;margin:20px 0}
 .footer-bottom{font-size:12px;text-align:center;border-top:1px solid #ddd;padding-top:10px}
-@media (max-width:768px){.page-layout-wrapper{grid-template-columns:1fr}.sidebar-categories{display:none}.hamburger-menu{display:block;margin:10px auto}.sidebar-categories.active{display:block}}
+@media (max-width:768px){.page-layout-wrapper{grid-template-columns:1fr}.sidebar-categories{display:none}.sidebar-categories.active{display:block}}
