@@ -1,0 +1,150 @@
+/* --- Sidebar Categories Styles --- */
+.sidebar-categories {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-categories:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.sidebar-categories h2.widget-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #ff6f61;
+  padding-bottom: 8px;
+}
+.sidebar-categories ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-categories ul li {
+  margin: 12px 0;
+  position: relative;
+}
+.sidebar-categories ul li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1.1em;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-categories ul li a:hover {
+  background: #ff6f61;
+  color: #fff;
+  padding-left: 18px;
+}
+.sidebar-categories ul li a i {
+  margin-right: 8px;
+  color: #ff6f61;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-categories ul li a:hover i {
+  color: #fff;
+}
+.sidebar-categories ul li:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: #eee;
+}
+.sidebar-categories ul li:last-child:after {
+  display: none;
+}
+
+/* --- Sidebar Footer (Contact Info) --- */
+.sidebar-footer {
+  margin-top: 25px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.sidebar-footer h3 {
+  font-size: 1.2em;
+  margin-bottom: 12px;
+  color: #333;
+}
+.sidebar-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-footer ul li {
+  margin: 8px 0;
+  font-size: 1em;
+  color: #555;
+}
+.sidebar-footer ul li i {
+  margin-right: 8px;
+  color: #ff6f61;
+}
+
+/* --- WhatsApp Floating Button --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+.whatsapp-float:hover {
+  background: #1ebd5a;
+}
+.whatsapp-float i {
+  font-size: 28px;
+}
+
+/* --- Responsive Sidebar --- */
+@media (max-width:991px){
+  .sidebar-categories{
+    display:none;
+  }
+  .hamburger-menu{
+    display:block;
+    cursor:pointer;
+    font-size:1.5em;
+    margin-bottom:15px;
+  }
+  .hamburger-menu i{
+    transition:all 0.3s ease;
+  }
+}
+@media (min-width:992px){
+  .hamburger-menu{
+    display:none;
+  }
+}
+
+/* --- Width Constraints (was Section 10) --- */
+.site-header,
+#ast-desktop-header,
+#ast-mobile-header,
+.ast-container{
+  max-width:1080px!important;
+  width:100%!important;
+  margin:0 auto!important;
+  padding-left:15px;
+  padding-right:15px;
+  box-sizing:border-box;
+}
