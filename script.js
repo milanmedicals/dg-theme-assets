@@ -1,1 +1,50 @@
-jQuery(function($){$(".hamburger-menu").on("click",function(){$(".sidebar-categories").toggleClass("active")});let searchTimeout;$("#search-input").on("input",function(){clearTimeout(searchTimeout);searchTimeout=setTimeout(function(){let term=$(this).val().trim();if(term.length>2){$.ajax({url:wp.ajax_url,type:"GET",data:{action:"pharmacy_search",term:term},success:function(results){console.log("Search results:",results)}})}},300)});$(document).on("added_to_cart",function(){$.ajax({url:wc_add_to_cart_params.ajax_url,data:{action:"woocommerce_get_cart_count"},success:function(count){$(".cart-count-bubble").text(count)}})})});
+// enhancements.js - Optimized for performance
+(function($) {
+    'use strict';
+    
+    // Debounce function to limit resize events
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    function updateSidebarVisibility() {
+        if (window.matchMedia("(max-width: 991px)").matches) {
+            $(".sidebar-categories").hide();
+            if (!$(".hamburger-menu").is(":visible")) {
+                $(".sidebar-categories").removeClass("active").show();
+            }
+        } else {
+            $(".sidebar-categories").removeClass("active").show();
+        }
+    }
+
+    // Initialize when DOM is ready
+    $(document).ready(function() {
+        // Mobile menu toggle
+        if ($(".hamburger-menu").length) {
+            $(".hamburger-menu").on("click", function () {
+                $(".sidebar-categories").slideToggle(300).toggleClass("active");
+                $(this).find("i").toggleClass("fa-bars fa-times");
+            });
+        }
+
+        // Handle resize event with debounce
+        const debouncedResize = debounce(function() {
+            updateSidebarVisibility();
+        }, 250);
+        
+        $(window).on("resize", debouncedResize);
+
+        // Initial call to set correct state
+        updateSidebarVisibility();
+    });
+
+})(jQuery);
