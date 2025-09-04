@@ -1,0 +1,27 @@
+jQuery(function($){
+    function updateSidebarVisibility() {
+        if (window.matchMedia("(max-width: 991px)").matches) {
+            $(".sidebar-categories").hide();
+            if (!$(".hamburger-menu").is(":visible")) {
+                $(".sidebar-categories").removeClass("active").show();
+            }
+        } else {
+            $(".sidebar-categories").removeClass("active").show();
+        }
+    }
+
+    if ($(".hamburger-menu").length) {
+        $(".hamburger-menu").on("click", function () {
+            $(".sidebar-categories").slideToggle(300).toggleClass("active");
+            $(this).find("i").toggleClass("fa-bars fa-times");
+        });
+    }
+
+    // Handle resize event
+    $(window).on("resize", function () {
+        updateSidebarVisibility();
+    });
+
+    // Initial call to set correct state
+    updateSidebarVisibility();
+});
