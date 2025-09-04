@@ -1,50 +1,29 @@
-// enhancements.js - Optimized for performance
-(function($) {
-    'use strict';
-    
-    // Debounce function to limit resize events
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
+// pharma.js - optimized Astra child theme scripts
+jQuery(function ($) {
+  const $sidebar = $(".sidebar-categories");
+  const $hamburger = $(".hamburger-menu");
+
+  function updateSidebar() {
+    const isMobile = window.matchMedia("(max-width: 991px)").matches;
+    if (isMobile) {
+      $sidebar.hide().removeClass("active");
+    } else {
+      $sidebar.show().removeClass("active");
+      $hamburger.find("i").removeClass("fa-times").addClass("fa-bars");
     }
+  }
 
-    function updateSidebarVisibility() {
-        if (window.matchMedia("(max-width: 991px)").matches) {
-            $(".sidebar-categories").hide();
-            if (!$(".hamburger-menu").is(":visible")) {
-                $(".sidebar-categories").removeClass("active").show();
-            }
-        } else {
-            $(".sidebar-categories").removeClass("active").show();
-        }
-    }
+  $hamburger.on("click", function () {
+    $sidebar.stop(true, true).slideToggle(250).toggleClass("active");
+    $(this).find("i").toggleClass("fa-bars fa-times");
+  });
 
-    // Initialize when DOM is ready
-    $(document).ready(function() {
-        // Mobile menu toggle
-        if ($(".hamburger-menu").length) {
-            $(".hamburger-menu").on("click", function () {
-                $(".sidebar-categories").slideToggle(300).toggleClass("active");
-                $(this).find("i").toggleClass("fa-bars fa-times");
-            });
-        }
+  // Debounce resize to avoid forced reflows
+  let resizeTimer;
+  $(window).on("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(updateSidebar, 200);
+  });
 
-        // Handle resize event with debounce
-        const debouncedResize = debounce(function() {
-            updateSidebarVisibility();
-        }, 250);
-        
-        $(window).on("resize", debouncedResize);
-
-        // Initial call to set correct state
-        updateSidebarVisibility();
-    });
-
-})(jQuery);
+  updateSidebar();
+});
